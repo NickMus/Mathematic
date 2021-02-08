@@ -8,6 +8,9 @@ public class Const {
     public static final String USER_LOGIN = "login";
     public static final String USER_PASSWORD = "password";
     public static final String USER_EMAIL = "mail";
+    public static final String USER_RESULT = "test1";
+
+
 
 
 

@@ -1,19 +1,21 @@
 package Test1;
 
 
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
-
+import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.DialogEvent;
 import javafx.scene.control.RadioButton;
 import javafx.stage.Stage;
 
-public class Question1 {
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class Question1 extends radioBtn {
 
     @FXML
     private ResourceBundle resources;
@@ -49,9 +51,12 @@ public class Question1 {
 
 
 
+
     public void nextBtnPress() {
 
         //int a = count.count;
+
+        radioBtnChoose();
         nextButton.setOnAction(event -> {
             if (var2.isSelected()) {
                 Counter.increaseCount();
@@ -89,5 +94,7 @@ public class Question1 {
         stage.show();
     }
 
+
      Counter count = new Counter();
+
 }

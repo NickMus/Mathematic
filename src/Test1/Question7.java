@@ -9,10 +9,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
-import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import sample.DatabaseHandler;
+import sample.User;
 
-public class Question7 {
+import javax.swing.*;
+
+
+public class Question7 extends radioBtn {
 
     @FXML
     private ResourceBundle resources;
@@ -49,15 +53,27 @@ public class Question7 {
     public void nextBtnPress() {
 
         //int a = count.count;
+        radioBtnChoose();
         nextButton.setOnAction(event -> {
             if (var2.isSelected()) {
                 Counter.increaseCount();
                 count.setCount(Counter.count);
                 System.out.println(count.getCount());
-                openNewScene("/sample/contents.fxml");
-            } else if (var3.isSelected() || var1.isSelected() || var4.isSelected()) {
-                openNewScene("/sample/contents.fxml");
+                if(count.getCount() == 7) {
+                    openNewScene("/sample/Result_5.fxml");
+                }
+            }else if (var3.isSelected() || var1.isSelected() || var4.isSelected()) {
+               if(count.getCount() == 5 || count.getCount() == 6) {
+                   openNewScene("/sample/Result_4.fxml");
+               }
+               else if(count.getCount() == 4) {
+                   openNewScene("/sample/Result_3.fxml");
+               } else if(count.getCount() < 4) {
+                   openNewScene("/sample/Result_2.fxml");
+               }
             }
+            JOptionPane.showMessageDialog(null, "Правильных ответов: " + count.getCount());
+
         });
     }
 
@@ -87,4 +103,6 @@ public class Question7 {
     }
 
     Counter count = new Counter();
+
+
 }

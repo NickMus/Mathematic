@@ -7,6 +7,8 @@ public class User {
     private String password;
     private String mail;
 
+
+
     public User(String firstName, String lastName, String login, String password, String mail) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -14,6 +16,8 @@ public class User {
         this.password = password;
         this.mail = mail;
     }
+
+
 
     public User() {
 
@@ -58,4 +62,7 @@ public class User {
     public void setMail(String mail) {
         this.mail = mail;
     }
+
+
 }
+

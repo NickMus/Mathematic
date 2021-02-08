@@ -13,7 +13,7 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-public class Question2 {
+public class Question2 extends radioBtn {
 
     @FXML
     private ResourceBundle resources;
@@ -49,6 +49,7 @@ public class Question2 {
     public void nextBtnPress() {
 
         // int a = count.count;
+        radioBtnChoose();
         nextButton.setOnAction(event -> {
             if (var3.isSelected()) {
                 Counter.increaseCount();
@@ -56,7 +57,7 @@ public class Question2 {
                 System.out.println(count.getCount());
                 openNewScene("/Test1/Question3.fxml");
             } else if(var1.isSelected() || var2.isSelected() || var4.isSelected()) {
-                openNewScene("/Test1/Question2.fxml");
+                openNewScene("/Test1/Question3.fxml");
 
             }
 

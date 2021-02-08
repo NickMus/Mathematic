@@ -6,4 +6,5 @@ public class Configs {
     protected String dbUser = "root";
     protected String dbPass = "040912";
     protected String dbName = "mathapp";
+
 }
