@@ -1,4 +1,6 @@
 package sample;
+import Test1.Counter;
+
 import java.sql.*;
 
 
@@ -50,6 +52,19 @@ public class DatabaseHandler extends Configs {
             throwables.printStackTrace();
         }
         return resultSet;
+    }
+
+
+    public void signResult(Counter counter) {
+
+        String insert = "INSERT INTO " + Const.USER_TABLE + "(" + Const.USER_RESULT + ")" +
+                "VALUES(?)";
+        try {
+            PreparedStatement preparedStatement = getDbConnection().prepareStatement(insert);
+            preparedStatement.setInt(1,counter.getCount());
+        } catch (SQLException | ClassNotFoundException throwables) {
+            throwables.printStackTrace();
+        }
     }
 
 }

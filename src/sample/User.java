@@ -6,8 +6,11 @@ public class User {
     private String login;
     private String password;
     private String mail;
+    private String result;
 
-
+    public String getResult() {
+        return result;
+    }
 
     public User(String firstName, String lastName, String login, String password, String mail) {
         this.firstName = firstName;

@@ -2,7 +2,7 @@ package Test1;
 
 public class Counter {
 
-  static public int count;
+    public static int count;
 
     public int getCount() {
         return count;

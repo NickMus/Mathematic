@@ -73,6 +73,8 @@ public class Question7 extends radioBtn {
                }
             }
             JOptionPane.showMessageDialog(null, "Правильных ответов: " + count.getCount());
+            DatabaseHandler db = new DatabaseHandler();
+            db.signResult(count);
 
         });
     }
